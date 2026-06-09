@@ -150,9 +150,11 @@ export class ApiService {
 
   private mapContactRequestToClient = (request: any): ContactRequest => {
     const statusMap: Record<number, string> = { 1: 'Pending', 2: 'Accepted', 3: 'Rejected' };
+    const typeMap: Record<number, string> = { 1: 'Contact', 2: 'Exchange' };
     return {
       ...request,
-      status: typeof request.status === 'number' ? (statusMap[request.status] || 'Pending') : request.status
+      status: typeof request.status === 'number' ? (statusMap[request.status] || 'Pending') : request.status,
+      requestType: typeof request.requestType === 'number' ? (typeMap[request.requestType] || 'Contact') : request.requestType
     } as ContactRequest;
   };
 

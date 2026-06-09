@@ -102,12 +102,21 @@ export interface UpdateCategoryRequest {
   description?: string | null;
 }
 
+export type RequestType = 'Contact' | 'Exchange' | number;
+
 export interface ContactRequest {
   id: string;
   listingId: string;
+  listingTitle: string;
+  listingAuthor: string;
   requesterId: string;
+  requesterName: string;
   ownerId: string;
+  ownerName: string;
   status: ContactRequestStatus;
+  requestType: RequestType;
+  offeredListingId?: string | null;
+  offeredListingTitle?: string | null;
   message?: string | null;
   createdAt: string;
   updatedAt?: string | null;

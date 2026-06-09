@@ -50,15 +50,22 @@ import { ContactRequest } from '../../../shared/models/api.models';
         @for (request of activeRequests(); track request.id) {
           <mat-card appearance="outlined">
             <mat-card-header>
-              <mat-card-title>{{ 'requests.listing' | translate }} #{{ request.listingId.slice(0, 8) }}</mat-card-title>
-              <mat-card-subtitle>{{ request.createdAt | date: 'medium' }}</mat-card-subtitle>
+              <mat-card-title>{{ request.listingTitle }}</mat-card-title>
+              <mat-card-subtitle>By {{ request.listingAuthor }} &bull; {{ request.createdAt | date: 'medium' }}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
+              <p>
+                <strong>{{ activeTab() === 0 ? 'From:' : 'To:' }}</strong> 
+                {{ activeTab() === 0 ? request.requesterName : request.ownerName }}
+              </p>
+              @if (request.requestType === 'Exchange' && request.offeredListingTitle) {
+                <p><strong>Offered:</strong> {{ request.offeredListingTitle }}</p>
+              }
               <mat-chip-set>
                 <mat-chip [class]="'status-' + request.status.toLowerCase()">{{ request.status }}</mat-chip>
               </mat-chip-set>
               @if (request.message) {
-                <p>{{ request.message }}</p>
+                <p><em>"{{ request.message }}"</em></p>
               }
             </mat-card-content>
             <mat-card-actions align="end">

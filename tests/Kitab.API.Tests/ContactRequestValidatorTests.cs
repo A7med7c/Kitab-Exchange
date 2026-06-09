@@ -13,6 +13,8 @@ public class ContactRequestValidatorTests
         var validator = new SendContactRequestCommandValidator();
         var result = validator.Validate(new SendContactRequestCommand(
             Guid.NewGuid(),
+            Kitab.Domain.Entities.RequestType.Contact,
+            null,
             "I am interested in this book."));
 
         Assert.True(result.IsValid);
@@ -24,6 +26,8 @@ public class ContactRequestValidatorTests
         var validator = new SendContactRequestCommandValidator();
         var result = validator.Validate(new SendContactRequestCommand(
             Guid.Empty,
+            Kitab.Domain.Entities.RequestType.Contact,
+            null,
             null));
 
         Assert.False(result.IsValid);
