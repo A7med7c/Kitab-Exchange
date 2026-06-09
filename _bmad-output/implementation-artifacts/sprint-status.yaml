@@ -1,0 +1,127 @@
+# generated: 2026-06-09
+# last_updated: 2026-06-09
+# project: Kitab - Peer-to-Peer Book Exchange
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts/stories
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - Developer typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-06-09
+last_updated: 2026-06-10T00:40:00Z
+project: Kitab - Peer-to-Peer Book Exchange
+project_key: NOKEY
+tracking_system: file-system
+story_location: _bmad-output/implementation-artifacts/stories
+
+development_status:
+  epic-0: in-progress
+  e0-1-scaffold-backend-solution: review
+  e0-2-scaffold-angular-frontend: review
+  e0-3-database-schema-category-seed: review
+  e0-4-rbac-admin-seed: backlog
+  e0-5-jwt-authentication-pipeline: backlog
+  epic-0-retrospective: optional
+
+  epic-1: backlog
+  g-01-browse-available-listings: backlog
+  g-02-search-books-by-keyword: backlog
+  g-03-filter-listings: backlog
+  g-04-sort-listing-results: backlog
+  g-05-paginate-browse-results: backlog
+  g-06-view-listing-detail: backlog
+  g-07-view-categories-for-browse: backlog
+  u-01-browse-as-registered-user: backlog
+  u-02-view-own-listing-on-detail-page: backlog
+  epic-1-retrospective: optional
+
+  epic-2: backlog
+  g-08-register-account: backlog
+  g-09-registration-gate-on-contact: backlog
+  u-03-login: backlog
+  u-04-logout: backlog
+  u-05-view-profile: backlog
+  a-01-admin-login-access: backlog
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  u-06-create-book-listing: backlog
+  u-07-upload-listing-photos: backlog
+  u-08-edit-own-listing: backlog
+  u-09-delete-own-listing: backlog
+  u-10-update-listing-status: backlog
+  u-11-my-listings-dashboard: backlog
+  u-12-listing-type-toggle-on-form: backlog
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  u-13-send-contact-request-sale: backlog
+  u-14-propose-exchange: backlog
+  u-15-view-incoming-requests: backlog
+  u-16-view-outgoing-requests: backlog
+  u-17-accept-request: backlog
+  u-18-reject-request: backlog
+  u-19-view-transaction-history: backlog
+  u-20-request-status-notifications: backlog
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  u-21-add-to-wishlist: backlog
+  u-22-remove-from-wishlist: backlog
+  u-23-view-wishlist: backlog
+  u-24-view-in-app-notifications: backlog
+  u-25-mark-notifications-as-read: backlog
+  u-26-wishlist-availability-alert: backlog
+  epic-5-retrospective: optional
+
+  epic-6: backlog
+  u-27-report-a-listing: backlog
+  a-02-manage-categories: backlog
+  a-03-view-all-listings-moderation: backlog
+  a-04-edit-or-remove-any-listing: backlog
+  a-05-review-reported-listings: backlog
+  a-06-view-user-accounts: backlog
+  a-07-suspend-user: backlog
+  a-08-deactivate-user-account: backlog
+  a-09-admin-dashboard-kpis: backlog
+  a-10-popular-categories-report: backlog
+  a-11-configure-platform-settings: backlog
+  a-12-most-listed-books-report: backlog
+  epic-6-retrospective: optional
+
+  epic-7: backlog
+  g-10-switch-language-en-arabic: backlog
+  g-11-responsive-browse-on-mobile: backlog
+  g-12-rtl-layout-for-arabic: backlog
+  u-28-authenticated-mobile-navigation: backlog
+  u-29-localized-form-validation: backlog
+  u-30-kitab-visual-identity: backlog
+  a-13-admin-responsive-layout: backlog
+  epic-7-retrospective: optional

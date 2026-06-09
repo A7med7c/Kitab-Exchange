@@ -1,0 +1,189 @@
+{
+  "app": {
+    "name": "Kitab",
+    "tagline": "Peer-to-Peer Book Exchange"
+  },
+  "shell": {
+    "primaryNav": "Primary navigation",
+    "openNav": "Open navigation menu",
+    "switchLanguage": "Switch language"
+  },
+  "nav": {
+    "home": "Home",
+    "books": "Browse Books",
+    "dashboard": "Dashboard",
+    "myListings": "My Listings",
+    "categories": "Categories",
+    "requests": "Requests",
+    "wishlist": "Wishlist",
+    "notifications": "Notifications",
+    "admin": "Admin"
+  },
+  "common": {
+    "back": "Back",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "loading": "Loading"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundMessage": "The page you requested does not exist or was moved.",
+    "backHome": "Back to home",
+    "server": "Something went wrong. Please try again.",
+    "unauthorized": "Please sign in to continue."
+  },
+  "auth": {
+    "login": "Log in",
+    "logout": "Log out",
+    "register": "Create account",
+    "loginSubtitle": "Sign in to manage listings, send requests, and track your exchanges.",
+    "registerSubtitle": "Create your Kitab account and start sharing books with readers near you.",
+    "email": "Email",
+    "password": "Password",
+    "displayName": "Display name",
+    "createAccount": "Create an account",
+    "haveAccount": "I already have an account"
+  },
+  "home": {
+    "eyebrow": "Kitab marketplace",
+    "title": "Buy, sell, and exchange books with readers near you",
+    "description": "Kitab is a peer-to-peer book exchange where you can list titles, discover local readers, and arrange sales or swaps without a middleman.",
+    "browse": "Browse books",
+    "join": "Join Kitab",
+    "panelTitle": "Built for book lovers",
+    "panelDescription": "Everything you need to move books between readers in one place.",
+    "panel": {
+      "point1": "List books for sale or exchange in minutes.",
+      "point2": "Filter by category, condition, and price.",
+      "point3": "Contact owners securely through Kitab requests."
+    },
+    "stats": {
+      "exchange": "Book exchange",
+      "sale": "Local listings",
+      "trust": "Reader-to-reader"
+    },
+    "features": {
+      "browse": "Discover books",
+      "browseDesc": "Search and filter available titles from readers in your community.",
+      "list": "List your books",
+      "listDesc": "Publish listings with category, condition, and pricing details.",
+      "connect": "Connect safely",
+      "connectDesc": "Send contact requests and manage incoming interest from one inbox."
+    }
+  },
+  "dashboard": {
+    "title": "Your dashboard",
+    "description": "Your Kitab profile and shortcuts to listings and requests.",
+    "roles": "Roles"
+  },
+  "books": {
+    "eyebrow": "Kitab marketplace",
+    "title": "Browse available books",
+    "description": "Explore peer-to-peer listings for sale and exchange.",
+    "emptyTitle": "No books listed yet",
+    "emptyMessage": "Be the first to add a book or check back soon for new listings.",
+    "notFoundTitle": "Book not found",
+    "notFoundMessage": "This listing may have been removed or completed.",
+    "newTitle": "Create a listing",
+    "newDescription": "Tell readers what book you are offering and how they can reach you.",
+    "editTitle": "Edit listing",
+    "editDescription": "Update your book details, price, and availability.",
+    "created": "Listing created successfully.",
+    "updated": "Listing updated successfully.",
+    "pagination": "Browse pagination",
+    "filters": {
+      "search": "Search books",
+      "condition": "Condition",
+      "type": "Listing type",
+      "minPrice": "Min price",
+      "maxPrice": "Max price",
+      "any": "Any",
+      "reset": "Reset filters"
+    },
+    "form": {
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "condition": "Condition",
+      "type": "Listing type",
+      "status": "Status",
+      "price": "Price",
+      "description": "Description",
+      "imagesHint": "Drag and drop images here, or choose files to upload.",
+      "chooseImages": "Choose images",
+      "imagePreview": "Listing image preview",
+      "imageUploadFailed": "Image upload failed. Use JPG, PNG, or WEBP files up to 5 MB.",
+      "categoryRequired": "Please select a category."
+    }
+  },
+  "myListings": {
+    "title": "My listings",
+    "description": "Manage the books you have published on Kitab.",
+    "emptyTitle": "You have no listings yet",
+    "emptyMessage": "Create your first listing to start selling or exchanging books.",
+    "deleted": "Listing deleted."
+  },
+  "categories": {
+    "title": "Book categories",
+    "description": "Browse the categories used to organize Kitab listings.",
+    "emptyTitle": "No categories yet",
+    "emptyMessage": "Categories will appear here once they are added by an administrator."
+  },
+  "requests": {
+    "title": "Contact requests",
+    "description": "Review incoming interest and track requests you have sent.",
+    "emptyTitle": "No requests yet",
+    "emptyMessage": "When someone contacts you about a listing, the request will appear here.",
+    "send": "Send request",
+    "sent": "Contact request sent.",
+    "accepted": "Request accepted.",
+    "rejected": "Request rejected.",
+    "incoming": "Incoming",
+    "outgoing": "Outgoing",
+    "listing": "Listing",
+    "message": "Message",
+    "accept": "Accept",
+    "reject": "Reject",
+    "loginToContact": "Log in to contact seller"
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "description": "Save books you want to revisit later.",
+    "emptyTitle": "Your wishlist is empty",
+    "emptyMessage": "Save books from browse results to compare them later."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Updates from requests, listings, and account activity.",
+    "emptyTitle": "Nothing new",
+    "emptyMessage": "Important updates will appear here."
+  },
+  "admin": {
+    "title": "Admin dashboard",
+    "description": "Monitor Kitab categories, listings, and request activity.",
+    "manageCategories": "Manage categories",
+    "cards": {
+      "users": "Users",
+      "listings": "Listings",
+      "categories": "Categories",
+      "requests": "Requests",
+      "activeListings": "Active listings"
+    },
+    "categories": {
+      "title": "Category management",
+      "description": "Create, edit, and remove book categories for the marketplace.",
+      "name": "Category name",
+      "descriptionLabel": "Description",
+      "add": "Add category",
+      "deleteTitle": "Delete category",
+      "deleteMessage": "Delete \"{{name}}\"? This cannot be undone.",
+      "created": "Category created.",
+      "updated": "Category updated.",
+      "deleted": "Category deleted."
+    }
+  }
+}

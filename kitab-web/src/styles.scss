@@ -1,0 +1,132 @@
+@use '@angular/material' as mat;
+@use 'styles/rtl';
+
+@include mat.core();
+
+$kitab-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$green-palette
+    ),
+    typography: (
+      brand-family: 'Inter, Segoe UI, Arial, sans-serif',
+      plain-family: 'Inter, Segoe UI, Arial, sans-serif'
+    ),
+    density: (
+      scale: 0
+    )
+  )
+);
+
+:root {
+  @include mat.all-component-themes($kitab-theme);
+
+  --kitab-bg: #f4f7f4;
+  --kitab-surface: #ffffff;
+  --kitab-surface-muted: #eef4ef;
+  --kitab-border: #d8ded5;
+  --kitab-text: #1f2a24;
+  --kitab-muted: #5f6d64;
+  --kitab-accent: #176b5b;
+  --kitab-accent-soft: #e3f2ee;
+  --kitab-hero-start: #0f4f44;
+  --kitab-hero-end: #1d7a68;
+  --kitab-warn: #9f3a38;
+  --kitab-radius: 12px;
+  --kitab-shadow: 0 12px 32px rgba(23, 107, 91, 0.08);
+  --kitab-page-width: 1200px;
+  --mat-sys-corner-medium: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--kitab-bg);
+  color: var(--kitab-text);
+  font-family: Inter, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[dir='rtl'] {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+.page-shell {
+  margin-inline: auto;
+  max-width: var(--kitab-page-width);
+  padding: 24px;
+  width: 100%;
+}
+
+.content-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.surface {
+  background: var(--kitab-surface);
+  border: 1px solid var(--kitab-border);
+  border-radius: var(--kitab-radius);
+  box-shadow: var(--kitab-shadow);
+}
+
+.mat-mdc-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-outlined-button {
+  border-radius: 999px !important;
+}
+
+.mat-mdc-button .mdc-button__label,
+.mat-mdc-unelevated-button .mdc-button__label,
+.mat-mdc-outlined-button .mdc-button__label {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+mat-card {
+  border-radius: var(--kitab-radius) !important;
+}
+
+mat-card-content {
+  padding-block: 16px !important;
+}
+
+.mat-icon {
+  font-family: 'Material Icons', sans-serif;
+  letter-spacing: normal;
+  overflow: hidden;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .page-shell {
+    padding: 16px;
+  }
+}

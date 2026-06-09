@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab — Admin Dashboard (S-20)</title>
+  <!-- Spine: EXPERIENCE S-20, Flow 4, DESIGN KPI cards -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, sans-serif; background: #F5F2EB; color: #1A1A18; }
+    .layout { display: flex; max-width: 1100px; margin: 24px auto; border: 2px solid #E8E2D9; border-radius: 12px; overflow: hidden; min-height: 520px; }
+    aside { width: 200px; background: #1B4332; color: #fff; padding: 20px 0; flex-shrink: 0; }
+    aside .brand { font-family: Georgia, serif; font-size: 20px; font-weight: 600; padding: 0 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.2); margin-bottom: 12px; }
+    aside a { display: block; padding: 10px 20px; font-size: 14px; color: rgba(255,255,255,0.8); text-decoration: none; }
+    aside a.active { background: rgba(255,255,255,0.15); color: #fff; font-weight: 600; }
+    main { flex: 1; padding: 24px; background: #FAF7F2; }
+    h1 { font-family: Georgia, serif; font-size: 26px; font-weight: 600; margin-bottom: 20px; color: #1B4332; }
+    .alert { background: #FEF3E2; border: 1px solid #D4A373; color: #BC6C25; padding: 12px 16px; border-radius: 10px; font-size: 14px; margin-bottom: 20px; }
+    .alert a { color: #1B4332; font-weight: 600; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+    .kpi { background: #fff; border: 1px solid #E8E2D9; border-radius: 14px; padding: 16px; }
+    .kpi-val { font-size: 28px; font-weight: 700; color: #1B4332; }
+    .kpi-label { font-size: 13px; color: #6B6560; margin-top: 4px; }
+    .section h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E8E2D9; font-size: 14px; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #E8E2D9; }
+    th { background: #fff; font-weight: 600; color: #6B6560; font-size: 12px; text-transform: uppercase; }
+    .caption { text-align: center; padding: 8px; font-size: 11px; color: #6B6560; }
+  </style>
+</head>
+<body>
+  <p class="caption">Mock: S-20 Admin Dashboard · Desktop · Flow 4 (Nour)</p>
+  <div class="layout">
+    <aside>
+      <div class="brand">Kitab Admin</div>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Categories</a>
+      <a href="#">Listings</a>
+      <a href="#">Users</a>
+      <a href="#">Settings</a>
+    </aside>
+    <main>
+      <h1>Dashboard</h1>
+      <div class="alert">⚠ <a href="#">3 reported listings</a> need review.</div>
+      <div class="kpis">
+        <div class="kpi"><div class="kpi-val">248</div><div class="kpi-label">Total listings</div></div>
+        <div class="kpi"><div class="kpi-val">89</div><div class="kpi-label">Active users (30d)</div></div>
+        <div class="kpi"><div class="kpi-val">34</div><div class="kpi-label">Exchanges (30d)</div></div>
+        <div class="kpi"><div class="kpi-val">Fiction</div><div class="kpi-label">Top category</div></div>
+      </div>
+      <div class="section">
+        <h2>Popular categories</h2>
+        <table>
+          <thead><tr><th>Category</th><th>Listings</th><th>Requests</th></tr></thead>
+          <tbody>
+            <tr><td>Fiction</td><td>82</td><td>41</td></tr>
+            <tr><td>Science</td><td>45</td><td>18</td></tr>
+            <tr><td>Children's</td><td>38</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

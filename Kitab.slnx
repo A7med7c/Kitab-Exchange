@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Kitab.API/Kitab.API.csproj" />
+    <Project Path="src/Kitab.Application/Kitab.Application.csproj" />
+    <Project Path="src/Kitab.Domain/Kitab.Domain.csproj" />
+    <Project Path="src/Kitab.Infrastructure/Kitab.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Kitab.API.Tests/Kitab.API.Tests.csproj" />
+  </Folder>
+</Solution>

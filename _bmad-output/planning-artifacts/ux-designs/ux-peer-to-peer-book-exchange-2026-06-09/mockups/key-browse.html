@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab — Browse (S-01)</title>
+  <!-- Spine: EXPERIENCE S-01, DESIGN listing-card, search-bar, filter chips -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, sans-serif; background: #FAF7F2; color: #1A1A18; min-height: 100vh; }
+    .phone { max-width: 390px; margin: 24px auto; border: 2px solid #E8E2D9; border-radius: 24px; overflow: hidden; background: #FAF7F2; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #fff; border-bottom: 1px solid #E8E2D9; }
+    .logo { font-family: Georgia, serif; font-size: 22px; font-weight: 600; color: #1B4332; }
+    .lang { font-size: 12px; background: #1B4332; color: #fff; padding: 4px 10px; border-radius: 9999px; }
+    .search-wrap { padding: 12px 16px; }
+    .search { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #E8E2D9; border-radius: 9999px; padding: 10px 16px; height: 44px; }
+    .search input { border: none; outline: none; flex: 1; font-size: 14px; background: transparent; }
+    .chips { display: flex; gap: 8px; padding: 0 16px 12px; overflow-x: auto; }
+    .chip { white-space: nowrap; padding: 6px 12px; border-radius: 9999px; font-size: 13px; border: 1px solid #E8E2D9; background: #fff; }
+    .chip.active { background: #1B4332; color: #fff; border-color: #1B4332; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px 80px; }
+    .card { background: #fff; border: 1px solid #E8E2D9; border-radius: 14px; overflow: hidden; }
+    .cover { height: 120px; background: linear-gradient(135deg, #40916C 0%, #1B4332 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; position: relative; }
+    .heart { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .card-body { padding: 10px; }
+    .title { font-size: 13px; font-weight: 600; line-height: 1.3; margin-bottom: 2px; }
+    .author { font-size: 11px; color: #6B6560; margin-bottom: 8px; }
+    .badges { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
+    .badge { font-size: 10px; padding: 2px 8px; border-radius: 9999px; font-weight: 500; }
+    .sale { background: #D4A373; color: #1A1208; }
+    .exchange { background: #40916C; color: #fff; }
+    .good { background: #52B788; color: #fff; }
+    .price { font-size: 16px; font-weight: 700; color: #1A1A18; }
+    nav.bottom { position: sticky; bottom: 0; display: flex; justify-content: space-around; align-items: center; height: 64px; background: #fff; border-top: 1px solid #E8E2D9; font-size: 10px; color: #6B6560; }
+    nav.bottom .active { color: #1B4332; font-weight: 600; }
+    .caption { text-align: center; padding: 8px; font-size: 11px; color: #6B6560; }
+  </style>
+</head>
+<body>
+  <p class="caption">Mock: S-01 Browse · Mobile · DESIGN.md listing-card, search-bar</p>
+  <div class="phone">
+    <header>
+      <span class="logo">Kitab</span>
+      <span style="font-size:18px">🔔</span>
+      <span class="lang">EN | ع</span>
+    </header>
+    <div class="search-wrap">
+      <div class="search">
+        <span>🔍</span>
+        <input type="text" placeholder="Search title, author…" value="Dostoevsky">
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip">Fiction</span>
+      <span class="chip active">Good</span>
+      <span class="chip active">For Sale</span>
+      <span class="chip">EGP 0–200</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="cover">📖 Cover<div class="heart">♡</div></div>
+        <div class="card-body">
+          <div class="title">Crime and Punishment</div>
+          <div class="author">Fyodor Dostoevsky</div>
+          <div class="badges"><span class="badge sale">Sale</span><span class="badge good">Good</span></div>
+          <div class="price">85 EGP</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cover">📖 Cover<div class="heart">♡</div></div>
+        <div class="card-body">
+          <div class="title">The Brothers Karamazov</div>
+          <div class="author">Fyodor Dostoevsky</div>
+          <div class="badges"><span class="badge exchange">Exchange</span><span class="badge good">Good</span></div>
+          <div class="price" style="font-size:13px;font-weight:500;color:#40916C">Swap</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cover">📖 Cover</div>
+        <div class="card-body">
+          <div class="title">Notes from Underground</div>
+          <div class="author">Fyodor Dostoevsky</div>
+          <div class="badges"><span class="badge sale">Sale</span></div>
+          <div class="price">45 EGP</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cover">📖 Cover</div>
+        <div class="card-body">
+          <div class="title">The Idiot</div>
+          <div class="author">Fyodor Dostoevsky</div>
+          <div class="badges"><span class="badge sale">Sale</span></div>
+          <div class="price">60 EGP</div>
+        </div>
+      </div>
+    </div>
+    <nav class="bottom">
+      <span class="active">Browse</span>
+      <span>Add</span>
+      <span>Requests</span>
+      <span>Wishlist</span>
+      <span>Profile</span>
+    </nav>
+  </div>
+</body>
+</html>

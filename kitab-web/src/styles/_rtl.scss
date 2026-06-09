@@ -1,0 +1,22 @@
+html[dir='rtl'],
+body[dir='rtl'] {
+  text-align: start;
+}
+
+html[dir='rtl'] {
+  .page-header {
+    text-align: start;
+  }
+
+  .hero__inner,
+  .hero__actions,
+  .quick-links,
+  .admin-actions,
+  .filters {
+    direction: rtl;
+  }
+
+  .mat-mdc-paginator-container {
+    direction: rtl;
+  }
+}

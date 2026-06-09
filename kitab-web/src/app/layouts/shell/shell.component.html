@@ -1,0 +1,95 @@
+<mat-sidenav-container class="shell">
+  <mat-sidenav #drawer class="shell__sidenav" mode="over">
+    <a class="brand" routerLink="/" (click)="drawer.close()">
+      <mat-icon aria-hidden="true">auto_stories</mat-icon>
+      <span class="brand__text">
+        <strong>{{ 'app.name' | translate }}</strong>
+        <small>{{ 'app.tagline' | translate }}</small>
+      </span>
+    </a>
+
+    <nav class="nav-list" [attr.aria-label]="'shell.primaryNav' | translate">
+      @for (item of navItems; track item.route) {
+        @if (canShow(item)) {
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: isExact(item.route) }"
+            (click)="drawer.close()"
+          >
+            <mat-icon aria-hidden="true">{{ item.icon }}</mat-icon>
+            <span>{{ item.labelKey | translate }}</span>
+          </a>
+        }
+      }
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="topbar">
+      <div class="topbar__start">
+        <button
+          mat-icon-button
+          type="button"
+          class="menu-button"
+          (click)="drawer.toggle()"
+          [attr.aria-label]="'shell.openNav' | translate"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <a class="brand brand--desktop" routerLink="/">
+          <mat-icon aria-hidden="true">auto_stories</mat-icon>
+          <span class="brand__text">
+            <strong>{{ 'app.name' | translate }}</strong>
+            <small>{{ 'app.tagline' | translate }}</small>
+          </span>
+        </a>
+      </div>
+
+      <nav class="desktop-nav" [attr.aria-label]="'shell.primaryNav' | translate">
+        @for (item of primaryNavItems; track item.route) {
+          @if (canShow(item)) {
+            <a
+              mat-button
+              [routerLink]="item.route"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: isExact(item.route) }"
+            >
+              <mat-icon aria-hidden="true">{{ item.icon }}</mat-icon>
+              <span class="nav-label">{{ item.labelKey | translate }}</span>
+            </a>
+          }
+        }
+      </nav>
+
+      <div class="topbar-actions">
+        <button
+          mat-stroked-button
+          type="button"
+          class="lang-button"
+          (click)="translation.toggle()"
+          [attr.aria-label]="'shell.switchLanguage' | translate"
+        >
+          <mat-icon aria-hidden="true">translate</mat-icon>
+          <span>{{ translation.language() === 'ar' ? 'العربية' : 'English' }}</span>
+        </button>
+
+        @if (auth.isAuthenticated()) {
+          <span class="user-chip">{{ auth.currentUser()?.displayName }}</span>
+          <button mat-button type="button" (click)="auth.logout()">
+            <mat-icon aria-hidden="true">logout</mat-icon>
+            <span>{{ 'auth.logout' | translate }}</span>
+          </button>
+        } @else {
+          <a mat-stroked-button routerLink="/login">{{ 'auth.login' | translate }}</a>
+          <a mat-flat-button routerLink="/register">{{ 'auth.register' | translate }}</a>
+        }
+      </div>
+    </mat-toolbar>
+
+    <main class="page-shell">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

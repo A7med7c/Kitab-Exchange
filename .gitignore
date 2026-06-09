@@ -1,0 +1,32 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+**/bin/
+**/obj/
+
+# User files
+*.user
+*.suo
+
+# Angular
+kitab-web/node_modules/
+kitab-web/dist/
+kitab-web/.angular/
+
+# Node (احتياطي)
+node_modules/
+dist/
+.angular/
+coverage/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db

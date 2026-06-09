@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab — Requests (S-12)</title>
+  <!-- Spine: EXPERIENCE S-12, request-card, Flow 2 -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, sans-serif; background: #FAF7F2; color: #1A1A18; }
+    .phone { max-width: 390px; margin: 24px auto; border: 2px solid #E8E2D9; border-radius: 24px; overflow: hidden; background: #FAF7F2; }
+    header { padding: 16px; background: #fff; border-bottom: 1px solid #E8E2D9; }
+    h1 { font-family: Georgia, serif; font-size: 22px; font-weight: 600; color: #1B4332; }
+    .tabs { display: flex; border-bottom: 1px solid #E8E2D9; background: #fff; }
+    .tab { flex: 1; text-align: center; padding: 12px; font-size: 14px; color: #6B6560; border-bottom: 2px solid transparent; }
+    .tab.active { color: #1B4332; font-weight: 600; border-color: #1B4332; }
+    .list { padding: 12px 16px 80px; display: flex; flex-direction: column; gap: 12px; }
+    .req { background: #fff; border: 1px solid #E8E2D9; border-radius: 14px; padding: 14px; }
+    .req-top { display: flex; gap: 12px; margin-bottom: 10px; }
+    .thumb { width: 48px; height: 64px; background: #40916C; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 10px; }
+    .req-info { flex: 1; }
+    .req-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .req-msg { font-size: 13px; color: #6B6560; line-height: 1.4; }
+    .pill { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 9999px; font-weight: 500; margin-top: 6px; }
+    .pending { background: #FEF3E2; color: #BC6C25; }
+    .accepted { background: #D8F3DC; color: #2D6A4F; }
+    .actions { display: flex; gap: 8px; margin-top: 12px; }
+    .btn { flex: 1; height: 40px; border-radius: 10px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
+    .accept { background: #2D6A4F; color: #fff; }
+    .reject { background: #fff; color: #9B2226; border: 1px solid #E8E2D9; }
+    .swap-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; color: #6B6560; }
+    .arrow { color: #40916C; font-weight: bold; }
+    .banner { background: #D8F3DC; color: #2D6A4F; padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-top: 10px; }
+    .caption { text-align: center; padding: 8px; font-size: 11px; color: #6B6560; }
+  </style>
+</head>
+<body>
+  <p class="caption">Mock: S-12 Requests · Incoming tab · Flow 2 (Omar exchange)</p>
+  <div class="phone">
+    <header><h1>My Requests</h1></header>
+    <div class="tabs">
+      <div class="tab active">Incoming (2)</div>
+      <div class="tab">Outgoing</div>
+    </div>
+    <div class="list">
+      <div class="req">
+        <div class="req-top">
+          <div class="thumb">1984</div>
+          <div class="req-info">
+            <div class="req-title">Exchange proposal from Youssef</div>
+            <div class="req-msg">"I have Animal Farm in similar condition. Interested?"</div>
+            <span class="pill pending">Pending</span>
+          </div>
+        </div>
+        <div class="swap-row">
+          <span class="thumb" style="width:36px;height:48px;font-size:8px">Animal Farm</span>
+          <span class="arrow">⇄</span>
+          <span style="font-size:12px">Your <strong>1984</strong></span>
+        </div>
+        <div class="actions">
+          <button class="btn accept">Accept</button>
+          <button class="btn reject">Reject</button>
+        </div>
+      </div>
+      <div class="req">
+        <div class="req-top">
+          <div class="thumb">BNW</div>
+          <div class="req-info">
+            <div class="req-title">Contact from Layla</div>
+            <div class="req-msg">"Is this available this weekend?"</div>
+            <span class="pill accepted">Accepted</span>
+          </div>
+        </div>
+        <div class="banner">Arrange payment and handoff directly with Layla.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitab — Listing Detail (S-02)</title>
+  <!-- Spine: EXPERIENCE S-02, Flow 1, DESIGN primary CTA, seller preview -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans Arabic', Inter, system-ui, sans-serif; background: #FAF7F2; color: #1A1A18; }
+    .phone { max-width: 390px; margin: 24px auto; border: 2px solid #E8E2D9; border-radius: 24px; overflow: hidden; background: #FAF7F2; min-height: 700px; position: relative; padding-bottom: 72px; }
+    .back { padding: 12px 16px; font-size: 14px; color: #1B4332; }
+    .gallery { height: 220px; background: linear-gradient(135deg, #40916C, #1B4332); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; }
+    .dots { display: flex; justify-content: center; gap: 6px; padding: 10px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #E8E2D9; }
+    .dot.on { background: #1B4332; }
+    .content { padding: 16px; }
+    .badges { display: flex; gap: 6px; margin-bottom: 8px; }
+    .badge { font-size: 11px; padding: 4px 10px; border-radius: 9999px; font-weight: 500; }
+    .sale { background: #D4A373; }
+    .good { background: #52B788; color: #fff; }
+    h1 { font-family: Georgia, serif; font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+    .author { color: #6B6560; font-size: 14px; margin-bottom: 12px; }
+    .price { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+    .desc { font-size: 14px; line-height: 1.5; color: #1A1A18; margin-bottom: 20px; }
+    .seller { display: flex; align-items: center; gap: 12px; padding: 12px; background: #fff; border: 1px solid #E8E2D9; border-radius: 14px; }
+    .avatar { width: 40px; height: 40px; border-radius: 50%; background: #1B4332; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+    .seller-name { font-weight: 600; font-size: 14px; }
+    .seller-meta { font-size: 12px; color: #6B6560; }
+    .cta-bar { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 16px; background: #fff; border-top: 1px solid #E8E2D9; }
+    .cta { width: 100%; height: 48px; background: #1B4332; color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; }
+    .caption { text-align: center; padding: 8px; font-size: 11px; color: #6B6560; }
+  </style>
+</head>
+<body>
+  <p class="caption">Mock: S-02 Listing Detail · Arabic RTL · Flow 1 (Layla)</p>
+  <div class="phone">
+    <div class="back">→ رجوع</div>
+    <div class="gallery">صورة الغلاف ١ من ٣</div>
+    <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="content">
+      <div class="badges"><span class="badge sale">للبيع</span><span class="badge good">جيد</span></div>
+      <h1>الجريمة والعقاب</h1>
+      <p class="author">فيودور دوستويفسكي · خيال</p>
+      <p class="price">٨٥ ج.م</p>
+      <p class="desc">نسخة ورقية بحالة جيدة. بعض تظليل بسيط في الفصل الأول. التسليم في القاهرة.</p>
+      <div class="seller">
+        <div class="avatar">ع</div>
+        <div>
+          <div class="seller-name">عمر</div>
+          <div class="seller-meta">عضو منذ ٢٠٢٤</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-bar">
+      <button class="cta">تواصل مع البائع</button>
+    </div>
+  </div>
+</body>
+</html>
