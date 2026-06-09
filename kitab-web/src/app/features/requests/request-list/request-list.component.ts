@@ -14,7 +14,7 @@ import { NotificationService } from '../../../core/services/notification.service
 import { EmptyStateComponent } from '../../../shared/components/empty-state/empty-state.component';
 import { PageHeaderComponent } from '../../../shared/components/page-header/page-header.component';
 import { SkeletonLoaderComponent } from '../../../shared/components/skeleton-loader/skeleton-loader.component';
-import { ContactRequest } from '../../../shared/models/api.models';
+import { ContactRequest, ContactRequestStatus } from '../../../shared/models/api.models';
 
 @Component({
   selector: 'app-request-list',
@@ -62,7 +62,7 @@ import { ContactRequest } from '../../../shared/models/api.models';
                 <p><strong>Offered:</strong> {{ request.offeredListingTitle }}</p>
               }
               <mat-chip-set>
-                <mat-chip [class]="'status-' + request.status.toLowerCase()">{{ request.status }}</mat-chip>
+                <mat-chip [class]="getStatusClass(request.status)">{{ request.status }}</mat-chip>
               </mat-chip-set>
               @if (request.message) {
                 <p><em>"{{ request.message }}"</em></p>
@@ -138,6 +138,13 @@ export class RequestListComponent {
 
   constructor() {
     this.loadRequests();
+  }
+
+  protected getStatusClass(status: ContactRequestStatus): string {
+    if (status === 'Pending' || status === 0) return 'status-pending';
+    if (status === 'Accepted' || status === 1) return 'status-accepted';
+    if (status === 'Rejected' || status === 2) return 'status-rejected';
+    return '';
   }
 
   protected onTabChange(event: MatTabChangeEvent): void {

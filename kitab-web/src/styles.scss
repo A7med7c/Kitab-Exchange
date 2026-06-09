@@ -130,3 +130,11 @@ mat-card-content {
     padding: 16px;
   }
 }
+
+header,
+mat-toolbar,
+.navbar,
+.topbar {
+  overflow: hidden;
+  height: auto;
+}
