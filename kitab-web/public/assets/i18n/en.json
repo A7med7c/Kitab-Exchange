@@ -145,7 +145,25 @@
     "created": "Listing created successfully.",
     "updated": "Listing updated successfully.",
     "pagination": "Browse pagination",
+    "resultsFound": "books found",
+    "emptyHint": "Try changing your filters or add a new listing.",
+    "paginator": {
+      "itemsPerPage": "Items per page:",
+      "nextPage": "Next page",
+      "previousPage": "Previous page",
+      "firstPage": "First page",
+      "lastPage": "Last page"
+    },
+    "sort": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "priceAsc": "Price: Low to High",
+      "priceDesc": "Price: High to Low"
+    },
     "filters": {
+      "title": "Filters",
+      "advanced": "Advanced Filters",
+      "sortBy": "Sort By",
       "search": "Search books",
       "condition": "Condition",
       "type": "Listing type",
