@@ -12,6 +12,7 @@ using Kitab.Infrastructure.ContactRequests;
 using Kitab.Infrastructure.Listings;
 using Kitab.Infrastructure.Identity;
 using Kitab.Infrastructure.Persistence;
+using Kitab.Infrastructure.Wishlists;
 
 namespace Kitab.Infrastructure;
 
@@ -45,6 +46,7 @@ public static class DependencyInjection
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IContactRequestRepository, ContactRequestRepository>();
         services.AddScoped<IListingRepository, ListingRepository>();
+        services.AddScoped<IWishlistRepository, WishlistRepository>();
         services.AddScoped<IListingImageService, ListingImageService>();
         services
             .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

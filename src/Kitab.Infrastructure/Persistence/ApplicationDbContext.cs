@@ -16,6 +16,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, Applicati
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Listing> Listings => Set<Listing>();
     public DbSet<ContactRequest> ContactRequests => Set<ContactRequest>();
+    public DbSet<WishlistItem> WishlistItems => Set<WishlistItem>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
