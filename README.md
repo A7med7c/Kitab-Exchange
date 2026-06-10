@@ -29,7 +29,7 @@ Admins can moderate listings and manage categories.
 - ASP.NET Core Web API
 - Entity Framework Core (SQL Server)
 - ASP.NET Core Identity
-- JWT ******
+- JSON Web Tokens (JWT)
 - MediatR + FluentValidation + AutoMapper
 - Swagger/OpenAPI (Development environment)
 
@@ -101,7 +101,7 @@ Application startup (`Program.cs`) registers services, enables JWT auth, CORS, s
 ```
 
 ## Getting Started
-## Prerequisites
+### Prerequisites
 - .NET SDK 8.0+
 - Node.js (with npm)
 - SQL Server (local instance) **or** Docker
@@ -117,7 +117,7 @@ This starts SQL Server 2022 on `localhost:1433`.
 From repository root:
 ```bash
 dotnet restore Kitab.sln
-dotnet run --project /home/runner/work/Kitab-Exchange/Kitab-Exchange/A7med7c/Kitab-Exchange/src/Kitab.API
+dotnet run --project src/Kitab.API/Kitab.API.csproj
 ```
 
 Default development URLs (from launch settings):
@@ -129,7 +129,7 @@ Swagger UI (development):
 
 ### 3) Run the Frontend
 ```bash
-cd /home/runner/work/Kitab-Exchange/Kitab-Exchange/A7med7c/Kitab-Exchange/kitab-web
+cd kitab-web
 npm ci
 npm start
 ```
@@ -156,7 +156,10 @@ On startup, migrations and seeders run automatically (`DataSeeder.SeedAsync`):
 - Initial categories list
 - Admin account:
   - Email: `admin@kitab.com`
-  - Password: `Admin@123`
+  - Password: see `src/Kitab.Infrastructure/Persistence/DataSeeder.cs`
+
+> ⚠️ The seeded admin password is defined in `src/Kitab.Infrastructure/Persistence/DataSeeder.cs` for local development bootstrap only.  
+> Change it before using the project outside local development.
 
 ### Frontend
 Environment files:
@@ -219,12 +222,12 @@ Base API route prefix: `/api`
 ## Testing
 ### Backend tests
 ```bash
-dotnet test /home/runner/work/Kitab-Exchange/Kitab-Exchange/A7med7c/Kitab-Exchange/Kitab.sln
+dotnet test Kitab.sln
 ```
 
 ### Frontend tests
 ```bash
-cd /home/runner/work/Kitab-Exchange/Kitab-Exchange/A7med7c/Kitab-Exchange/kitab-web
+cd kitab-web
 npm run test -- --watch=false
 ```
 
