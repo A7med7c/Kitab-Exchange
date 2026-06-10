@@ -236,7 +236,12 @@ export class DetailComponent {
         return;
       }
 
-      this.api.sendContactRequest({ listingId: listing.id, message: messageControl.value || null }).subscribe({
+      this.api.sendContactRequest({
+        listingId: listing.id,
+        requestType: 1, // 1 = Contact
+        offeredListingId: null,
+        message: messageControl.value || null
+      }).subscribe({
         next: () => {
           this.notifications.success('requests.sent');
           void this.router.navigate(['/requests']);

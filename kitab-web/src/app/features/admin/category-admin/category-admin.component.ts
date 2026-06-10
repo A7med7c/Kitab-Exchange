@@ -87,14 +87,16 @@ export class DeleteCategoryDialogComponent {
         </ng-container>
 
         <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef></th>
-          <td mat-cell *matCellDef="let category" class="actions">
-            <button mat-icon-button type="button" (click)="startEdit(category)" [attr.aria-label]="'common.edit' | translate">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button type="button" (click)="remove(category)" [attr.aria-label]="'common.delete' | translate">
-              <mat-icon>delete</mat-icon>
-            </button>
+          <th mat-header-cell *matHeaderCellDef class="actions-cell"></th>
+          <td mat-cell *matCellDef="let category" class="actions-cell">
+            <div class="actions-wrapper">
+              <button mat-icon-button type="button" (click)="startEdit(category)" [attr.aria-label]="'common.edit' | translate">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button type="button" (click)="remove(category)" [attr.aria-label]="'common.delete' | translate">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
           </td>
         </ng-container>
 
@@ -114,9 +116,23 @@ export class DeleteCategoryDialogComponent {
 
     .category-table {
       width: 100%;
+      table-layout: fixed;
     }
 
-    .actions {
+    .mat-column-name {
+      width: 200px;
+    }
+
+    .mat-column-description {
+      width: auto;
+    }
+
+    .actions-cell {
+      width: 120px;
+      padding-inline-end: 16px;
+    }
+
+    .actions-wrapper {
       display: flex;
       gap: 4px;
       justify-content: flex-end;

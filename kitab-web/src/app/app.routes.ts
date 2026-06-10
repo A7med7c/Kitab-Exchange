@@ -80,6 +80,18 @@ export const routes: Routes = [
           import('./features/admin/category-admin/category-admin.component').then((m) => m.CategoryAdminComponent)
       },
       {
+        path: 'about',
+        loadComponent: () => import('./features/about/about.component').then((m) => m.AboutComponent)
+      },
+      {
+        path: 'contact',
+        loadComponent: () => import('./features/contact/contact.component').then((m) => m.ContactComponent)
+      },
+      {
+        path: 'faq',
+        loadComponent: () => import('./features/faq/faq.component').then((m) => m.FaqComponent)
+      },
+      {
         path: 'login',
         canActivate: [guestGuard],
         loadComponent: () => import('./features/auth/login/login.component').then((m) => m.LoginComponent)

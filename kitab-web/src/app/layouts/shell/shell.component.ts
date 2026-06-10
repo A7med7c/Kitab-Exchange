@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AuthService } from '../../core/services/auth.service';
 import { TranslationService } from '../../core/services/translation.service';
+import { FooterComponent } from '../footer/footer.component';
 
 interface NavItem {
   labelKey: string;
@@ -27,7 +28,8 @@ interface NavItem {
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
-    TranslateModule
+    TranslateModule,
+    FooterComponent
   ],
   templateUrl: './shell.component.html',
   styleUrl: './shell.component.scss'

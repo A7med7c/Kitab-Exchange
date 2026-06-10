@@ -124,6 +124,8 @@ export interface ContactRequest {
 
 export interface SendContactRequest {
   listingId: string;
+  requestType: RequestType;
+  offeredListingId?: string | null;
   message?: string | null;
 }
 
