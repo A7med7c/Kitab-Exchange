@@ -1,5 +1,6 @@
 using Kitab.Application.Common.Interfaces;
 using Kitab.Domain.Entities;
+using Kitab.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kitab.Infrastructure.Wishlists;
